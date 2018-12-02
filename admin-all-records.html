@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Records - iReporter</title>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+
+  
+   <!-- navbar-->
+<div class="topnav">
+    
+      <a class="active" href="t" >iReporter</a> 
+      <a href="admin-login.html" ">Admin</a>
+      
+      <!-- Right-sided navbar links -->
+      <div class="topnav-smallText">
+         <a href="#"> About</a>
+         <a href="#">Contact</a>
+      </div>     
+</div>
+
+<div id="container" >
+
+    <div id="header" >
+        <h1>iReporter </h1>
+       </div>
+
+       <div class="title-head">Admin Panel</div>
+
+
+          <div class="tab">
+            <button class="tablinks" onclick="openRecord(event, 'red-flag')" id="defaultOpen">Red Flags</button>
+            <button class="tablinks" onclick="openRecord(event, 'intervention')">Interventions</button>
+
+            <div id="red-flag" class="tabcontent">
+
+               <table >
+                <caption><b>Red-Flags</b></caption> <br>
+                 <tr>
+                  <th>Index</th>
+                   <th>Title</th>
+                   <th>Description</th>
+                   <th>Status</th> 
+                   <th>User</th>
+                  <th>Update Status</th>
+    
+                 </tr>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                       <select> 
+                          <option value="" ><a href='#'>Under Investigation</a></option>
+                          <option value="" >Resolved</option>
+                          <option value="" >Rejected</option>
+                        </select>        
+                    </td>
+                  </tr>
+  
+               </table>
+            </div>
+
+            <div id="intervention" class="tabcontent">
+     
+               <table >
+               <caption><b>Interventions</b></caption> <br>
+              <tr>
+             <th>Index</th>
+             <th>Title</th>
+             <th>Description</th>
+             <th>Status</th> 
+             <th>User</th>
+             <th>Update Status</th>
+         
+            </tr>
+            <tr>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td>
+                 <select> 
+                     <option value="" >Under Investigation</option>
+                     <option value="" >Resolved</option>
+                     <option value="" >Rejected</option>
+                 </select>        </td>
+           </tr>
+       
+           </table>
+        </div>  
+
+
+      <div id="footer"> </div>  
+</div>
+
+
+<!-- JS script for tabifying red-flag and intervention records-->
+
+<script>
+function openRecord(evt, RecordName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(RecordName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+</body>
+</html>
