@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add New Record-iReporter </title>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+
+
+   <!-- Navbar -->
+<div class="topnav">
+    
+      <a class="active" href="index.html" >iReporter</a> 
+      <a href="admin-login.html" ">Admin</a>
+      
+      <!-- Right-sided  -->
+      <div class="topnav-smallText">
+         <a href="#"> About</a>
+         <a href="#">Contact</a>
+      </div>      
+</div>
+<div id="container" >
+  <div id="header" >
+    <h1>iReporter </h1>
+  </div>
+  
+       <div class="title-head">Create a new Report   </div>
+
+            <form action="#">
+             
+              <p>
+                <label><b>Report type</b></label><br>
+                <select>
+                        <option value="" selected disabled hidden>Select </option>
+                        <option value="red-flag">Red-Flag</option>
+                        <option value="intervention">Intervention</option>
+                     
+                      </select>
+                </p>
+             
+              <fieldset>
+                <legend>Description</legend>
+                <label for="title"><b>Title</b></label>
+                <br><input type="text" name="title" > 
+
+                <P>
+                  <label>Short Description</label><br>
+                  <textarea id = "myTextArea" rows = "3" cols = "50"></textarea>
+                  </P>
+                  <p>
+                <label><b>Add geolocation</b></label><br>
+                <input type="text" name="geolocation" > 
+                </p>
+              </fieldset>    
+        
+              <p>
+              <fieldset>
+                    <legend> Supporting elements</legend>
+               <label><b>Upload Image</b></label><br>
+                <input type="file" name="image" > 
+                
+                <p>
+                <label><b>Upload Video</b></label><br>
+                <input type="file" name="Video" > 
+                </p>
+             </fieldset>
+         
+         <button type="submit">Submit</button>
+        </form>
+
+     </div>
+</body>
+</html>
